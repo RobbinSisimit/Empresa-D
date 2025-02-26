@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "22dea998-71eb-4799-b022-f1fa973b558a",
+		"name": "Gestor-Empresa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37414241"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3011/Empresa/v1/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\":\"Admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3011/Empresa/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"Empresa",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3011/Empresa/v1/users/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Dulce\",\r\n    \"username\":\"Candy\",\r\n    \"email\":\"dulce@kinal.edu.gt\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3011/Empresa/v1/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"Empresa",
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3011/Empresa/v1/empresa/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNzU2YmRjNzk0YmY5OTg0OTFlYjUiLCJpYXQiOjE3NDA2MDg0NzksImV4cCI6MTc0MDYxMjA3OX0.4g7Kl_SKSpjzJiA2HpqY8myHGk7TriQE9Lgi-SbpA6g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Kinal\",\r\n    \"categoria\":\"Educativo\",\r\n    \"impacto\":\"mejoraron su promedio\",\r\n    \"año\":2025\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3011/Empresa/v1/empresa/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"Empresa",
+						"v1",
+						"empresa",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3011/Empresa/v1/empresa/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNzU2YmRjNzk0YmY5OTg0OTFlYjUiLCJpYXQiOjE3NDA2MDU5MzgsImV4cCI6MTc0MDYwOTUzOH0.GdlA0OT-dnIdZ48Co_lB4FpDVNpo-pxixWvLq1U8C9M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3011/Empresa/v1/empresa/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"Empresa",
+						"v1",
+						"empresa",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3011/Empresa/v1/empresa/AZ/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNzU2YmRjNzk0YmY5OTg0OTFlYjUiLCJpYXQiOjE3NDA2MDU5MzgsImV4cCI6MTc0MDYwOTUzOH0.GdlA0OT-dnIdZ48Co_lB4FpDVNpo-pxixWvLq1U8C9M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Procasa\",\r\n    \"categoria\":\"Empresas\",\r\n    \"impacto\":\"nada sobre saliente\",\r\n    \"año\":\"2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3011/Empresa/v1/empresa/AZ/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"Empresa",
+						"v1",
+						"empresa",
+						"AZ",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3011/Empresa/v1/empresa/67bf94dc55b91d03221bd5e1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNzU2YmRjNzk0YmY5OTg0OTFlYjUiLCJpYXQiOjE3NDA2MDg0NzksImV4cCI6MTc0MDYxMjA3OX0.4g7Kl_SKSpjzJiA2HpqY8myHGk7TriQE9Lgi-SbpA6g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"año\":2012\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3011/Empresa/v1/empresa/67bf94dc55b91d03221bd5e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"Empresa",
+						"v1",
+						"empresa",
+						"67bf94dc55b91d03221bd5e1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3011/Empresa/v1/empresa/ZA/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNzU2YmRjNzk0YmY5OTg0OTFlYjUiLCJpYXQiOjE3NDA2MDU5MzgsImV4cCI6MTc0MDYwOTUzOH0.GdlA0OT-dnIdZ48Co_lB4FpDVNpo-pxixWvLq1U8C9M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3011/Empresa/v1/empresa/ZA/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"Empresa",
+						"v1",
+						"empresa",
+						"ZA",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3011/Empresa/v1/empresa/categoriaAZ/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNzU2YmRjNzk0YmY5OTg0OTFlYjUiLCJpYXQiOjE3NDA2MDU5MzgsImV4cCI6MTc0MDYwOTUzOH0.GdlA0OT-dnIdZ48Co_lB4FpDVNpo-pxixWvLq1U8C9M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Procasa\",\r\n    \"categoria\":\"Empresas\",\r\n    \"impacto\":\"nada sobre saliente\",\r\n    \"año\":\"2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3011/Empresa/v1/empresa/categoriaAZ/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"Empresa",
+						"v1",
+						"empresa",
+						"categoriaAZ",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3011/Empresa/v1/empresa/ayoAZ/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNzU2YmRjNzk0YmY5OTg0OTFlYjUiLCJpYXQiOjE3NDA2MDg0NzksImV4cCI6MTc0MDYxMjA3OX0.4g7Kl_SKSpjzJiA2HpqY8myHGk7TriQE9Lgi-SbpA6g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"año\":2012\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3011/Empresa/v1/empresa/ayoAZ/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"Empresa",
+						"v1",
+						"empresa",
+						"ayoAZ",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
