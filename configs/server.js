@@ -6,8 +6,9 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import limiter from '../src/middlewares/validar-cant-peticiones.js'
-import authRoutes from '../src/auth/auth.routes.js'
-import authUsers from '../src/users/user.routes.js'
+import authRoutes from '../src/auth/auth.routes.js';
+import authUsers from '../src/users/user.routes.js';
+import authEmpresa from '../src/empresa/empresa.routes.js'
 
 import User from '../src/users/user.model.js'
 import { hash } from "argon2";
@@ -24,6 +25,7 @@ const configurarMiddlewares = (app) => {
 const configurarRutas = (app) =>{
     app.use("/Empresa/v1/auth", authRoutes);
     app.use("/Empresa/v1/users",authUsers);
+    app.use("/Empresa/v1/empresa",authEmpresa);
 }
 
 const conectarDB = async () => {
