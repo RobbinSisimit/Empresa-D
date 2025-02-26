@@ -15,27 +15,27 @@ export const login = async (req, res) => {
 
         if(!user){
             return res.status(400).json({
-                msg: "Credenciales Incorrectas, Correo No Existente En La Data Base"
+                msg: "Credenciales Incorrectas, Correo No Existente En La Data Base Bobo"
             });
         }
 
         if(!user.estado){
             return res.status(400).json({
-                msg: "El Usuario No Existe En La Base De Datos"
+                msg: "El Usuario No Existe En La Base De Datos :("
             }); 
         }
 
         const validPassword = await verify(user.password, password);
         if(!validPassword){
             return res.status(400).json({
-                msg: "La Contraseña Es Incorrecta"
+                msg: "La Contraseña Es Incorrecta recuerde bien :D"
             })
         }
 
         const token = await generarJWT(user.id);
         
         res.status(200).json({
-            msg: "Inicio De Sesion Exitoso!",
+            msg: "Inicio De Sesion Exitoso :D Si sos vos",
             userDetails: {
                 username: user.username,
                 token: token
@@ -68,7 +68,7 @@ export const register  = async (req, res) => {
         })
 
         return res.status(201).json({
-            message: "User Register Successfully",
+            message: "El usuario se registró exitosamente",
             userDetails:{
                 user: user.email
             }
@@ -78,7 +78,7 @@ export const register  = async (req, res) => {
         console.log(error);
 
         return res.status(500).json({
-            message: "User Registration Failed",
+            message: "Error en el registro de usuario",
             error: error.message
         })
     }
