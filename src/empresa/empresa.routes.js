@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { crearEmpresa , listarEmpresa, actulizarEmpresa, listarEmpresaDeAalaZ, listarEmpresaDeZalaA, listarCategoriaDeAalaZ, listarAñoDeAalaZ } from "./empresa.controller.js";
+import { crearEmpresa , listarEmpresa, actulizarEmpresa, listarEmpresaDeAalaZ, listarEmpresaDeZalaA, listarCategoriaDeAalaZ, listarAñoDeAalaZ, crearEmpresasXLSX } from "./empresa.controller.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { check } from "express-validator";
@@ -24,7 +24,9 @@ router.get("/", listarEmpresa);
 router.put(
     "/:id",
     [
-        validarJWT
+        validarJWT,
+        check("id", "No Es Un ID Valido").isMongoId(),
+        validarCampos
     ],
     actulizarEmpresa
 
@@ -37,5 +39,10 @@ router.get("/ZA/", listarEmpresaDeZalaA);
 router.get("/categoriaAZ/", listarCategoriaDeAalaZ);
 
 router.get("/ayoAZ/", listarAñoDeAalaZ);
+
+router.get(
+    "/exel",
+    crearEmpresasXLSX
+)
 
 export default router;

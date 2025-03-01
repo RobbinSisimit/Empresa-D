@@ -375,6 +375,37 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "http://localhost:3011/Empresa/v1/empresa/exel",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MxMzIwMjg2NzEzMTk3ZGYzODFjMGEiLCJpYXQiOjE3NDA4MDA1NzUsImV4cCI6MTc0MDgwNDE3NX0.4SbUSMG_SMooKAMlol4lrQ7PwJ3iAS2CfTUV582-AEk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3011/Empresa/v1/empresa/exel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3011",
+					"path": [
+						"Empresa",
+						"v1",
+						"empresa",
+						"exel"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
